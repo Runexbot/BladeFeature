@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', [ScoreController::class, 'index']);
 Route::post('/result', [ScoreController::class, 'store']);
 
